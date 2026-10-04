@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <form class="search" id="search-form" role="search" autocomplete="off">
+      <input type="search" id="search-input" placeholder="Search..." aria-label="Search the site">
+      <ul id="search-results" hidden></ul>
+    </form>
+  </header>
+
+  <main>
+    <h1>Welcome!</h1>
+    <p>Here's something to make you smile:</p>
+    <div class="joke" id="joke"></div>
+    <button id="new-joke" type="button">Another one!</button>
+  </main>
+
+  <footer>&copy; 2026 My Website</footer>
+  <script src="script.js"></script>
+</body>
+</html>

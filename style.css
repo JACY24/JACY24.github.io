@@ -1,0 +1,127 @@
+:root {
+  --bg: #fafaf7;
+  --fg: #222;
+  --accent: #6c4ff5;
+  --muted: #777;
+  --card: #fff;
+  --border: #e3e3dc;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.6;
+}
+
+header {
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+nav { display: flex; gap: 1.25rem; }
+
+nav a {
+  text-decoration: none;
+  color: var(--fg);
+  font-weight: 600;
+  padding: 0.25rem 0;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover,
+nav a.active { border-bottom-color: var(--accent); color: var(--accent); }
+
+.search { position: relative; }
+
+.search input {
+  padding: 0.45rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.95rem;
+  width: 220px;
+}
+
+.search input:focus { outline: 2px solid var(--accent); border-color: transparent; }
+
+#search-results {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  left: 0;
+  min-width: 220px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0.25rem 0;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  z-index: 10;
+}
+
+#search-results[hidden] { display: none; }
+#search-results li a { display: block; padding: 0.45rem 0.9rem; color: var(--fg); text-decoration: none; }
+#search-results li a:hover { background: var(--bg); }
+#search-results .none { padding: 0.45rem 0.9rem; color: var(--muted); }
+
+main {
+  max-width: 640px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+h1 { margin-top: 0; }
+
+.joke {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  font-size: 1.25rem;
+  min-height: 5rem;
+}
+
+button {
+  background: var(--accent);
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+button:hover { filter: brightness(1.1); }
+
+form label { display: block; font-weight: 600; margin-top: 1rem; }
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  margin-top: 0.3rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font: inherit;
+}
+
+form input:focus,
+form textarea:focus { outline: 2px solid var(--accent); border-color: transparent; }
+
+footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+  padding: 2rem 0;
+}
